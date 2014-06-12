@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+
+  <classPathEntry location="D:\Repositories\Maven\mysql\mysql-connector-java\5.1.30\mysql-connector-java-5.1.30.jar"/>
+
+  <context id="guu" >
+  
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/guuwiki?characterEncoding=utf8" userId="root" password="root" />
+   	
+    <javaModelGenerator targetPackage="com.guyuu.system.model" targetProject="guyuuwiki" />
+   
+    <sqlMapGenerator targetPackage="com.guyuu.system.mappers" targetProject="guyuuwiki" />
+   
+    <javaClientGenerator targetPackage="com.guyuu.system.mappers" targetProject="guyuuwiki" type="XMLMAPPER" />
+    	
+    	
+    		 
+		<table schema="realwork" tableName="guu_wiki_user" domainObjectName="WikiUser"></table>
+		<table schema="realwork" tableName="guu_wiki_user_role" domainObjectName="WikiUserRole"></table>
+		<table schema="realwork" tableName="guu_wiki_role" domainObjectName="WikiRole"></table>
+		<!--
+		<table schema="realwork" tableName="guu_wiki_entry" domainObjectName="WikiEntry"></table>
+		<table schema="realwork" tableName="guu_wiki_entry_catalog_history" domainObjectName="WikiCatalogHistory"></table>
+		<table schema="realwork" tableName="guu_wiki_entry_history" domainObjectName="WikiEntryHistory"></table>
+		<table schema="realwork" tableName="guu_wiki_entry_list" domainObjectName="WikiEntryList"></table>
+		
+		<table schema="realwork" tableName="guu_wiki_entry_type" domainObjectName="WikiEntryType"></table>
+		-->
+  </context>
+</generatorConfiguration>
